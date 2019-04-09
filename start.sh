@@ -16,7 +16,7 @@ echo '[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/et
 
 ssh-keygen -b 4096 -C $1
 
-username=`echo $1 | cut -d "@" -f 1
+username=`echo $1 | cut -d "@" -f 1`
 git config --global --add user.email $1
 git config --global --add user.name `echo username`
 sudo sh -c 'echo "/usr/local/bin/bash" >> /etc/shells'
